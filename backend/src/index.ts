@@ -14,21 +14,21 @@ app.get('/',async (req,res)=> {
 
 })
 
-app.post('/', async (req,res)=> {
+app.post('/register', async (req,res)=> {
     await UserModel.create({
-        firstName: "asdd",
-        lastName:"asdd",
-        email: "asdd"
+        firstName: "asddd",
+        lastName:"asddd",
+        email: "asddd"
     })
     
-    await UserModel.findByIdAndUpdate(
-        {_id: "670c92cb93a09cdf496a74c4"},
-        {email: "sda"}
-    )
+    // await UserModel.findByIdAndUpdate(
+    //     {_id: "670c92cb93a09cdf496a74c4"},
+    //     {email: "sda"}
+    // )
     
-    await UserModel.findByIdAndDelete(
-        {_id: "670c92cb93a09cdf496a74c4"},
-    )
+    // await UserModel.findByIdAndDelete(
+    //     {_id: "670c92cb93a09cdf496a74c4"},
+    // )
     
     res.send("success")
 })
